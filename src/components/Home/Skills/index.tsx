@@ -1,7 +1,24 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/prop-types */
 import * as React from 'react';
 
-interface ISkillsProps {}
+import * as Shared from '../../shared/exports';
+import SkillElement from './element';
 
-const Skills: React.FunctionComponent<ISkillsProps> = () => null;
+interface ISkillsProps {
+  data : string []
+}
+
+const Skills: React.FunctionComponent<ISkillsProps> = ({ data }) => {
+  console.log(data);
+  return (
+    <div>
+      <Shared.BlockTitle>SKILLS</Shared.BlockTitle>
+      <div className="grid gap-4 mt-6">
+        {data.map((e, ind) => <div key={ind}><SkillElement data={e} /></div>)}
+      </div>
+    </div>
+  );
+};
 
 export default Skills;

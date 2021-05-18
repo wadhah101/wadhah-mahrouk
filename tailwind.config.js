@@ -3,7 +3,7 @@ const lineClamp = require('@tailwindcss/line-clamp');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  purge: ['./src/**/*.{js,ts,jsx,tsx}'],
+  purge: ['./src/**/*.{ts,tsx}'],
   darkMode: false,
   theme: {
     fontFamily: {
